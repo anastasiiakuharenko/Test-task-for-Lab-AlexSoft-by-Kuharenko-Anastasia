@@ -23,7 +23,7 @@ console.log(make_array(5))
 let form = document.createElement('form');
 document.body.append(form);
 let select = document.createElement('select');
-select.style.fontSize = "50px";
+select.style.fontSize = "100px";
 form.append(select)
 for (var i = 0; i < 5; i++) {
     let option = document.createElement('option');
@@ -32,7 +32,6 @@ for (var i = 0; i < 5; i++) {
 }
 
 let names = document.createElement('div');
-div.style.fontSize = "50px";
 document.body.append(names);
 
 select.addEventListener("change", FindNameByFirstLetter);
