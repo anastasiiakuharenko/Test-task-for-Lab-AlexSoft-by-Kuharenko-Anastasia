@@ -1,1 +1,1 @@
-# Test task for Lab AlexSoft
+# Test task for Lab AlexSoft by Anastasiia Kuharenko
