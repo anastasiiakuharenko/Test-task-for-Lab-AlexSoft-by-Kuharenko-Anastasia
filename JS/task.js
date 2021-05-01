@@ -32,6 +32,7 @@ for (var i = 0; i < 5; i++) {
 }
 
 let names = document.createElement('div');
+names.style.fontSize = "50px";
 document.body.append(names);
 
 select.addEventListener("change", FindNameByFirstLetter);
