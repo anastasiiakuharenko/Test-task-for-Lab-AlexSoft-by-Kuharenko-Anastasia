@@ -214,8 +214,10 @@ img {
 .Very_long_slider_title {
     position: absolute;
     width: 404px;
-    margin-top: 252px;
-    margin-left: 698px;
+    z-index: 1;
+    display: inline-block;
+    bottom: 0;
+    right: 35px;
     padding: 15px;
 }
 
