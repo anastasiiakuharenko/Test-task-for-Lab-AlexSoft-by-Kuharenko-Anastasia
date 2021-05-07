@@ -53,6 +53,9 @@ async function FindNameByFirstLetter() {
         }
     }
     if (names.innerHTML == '') {
-        alert('no matches');
+        let nomatches = document.createElement('div');
+        nomatches.style.fontSize = "50px";
+        nomatches.innerHTML = 'No matches :(';
+        document.body.append(nomatches);
     }
 }
