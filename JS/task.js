@@ -4,7 +4,7 @@ function make_array(length) {
 
     let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    for (let i = 0; i < length; i++) {
+    for (let i = 1; i < length + 1; i++) {
         let unique_letter_is_found = false;
         while (unique_letter_is_found == false) {
             let unique_character = characters.charAt(Math.floor(Math.random() * characters.length));
@@ -25,13 +25,15 @@ document.body.append(form);
 let select = document.createElement('select');
 select.style.fontSize = "100px";
 form.append(select)
-for (var i = 0; i < 5; i++) {
+
+for (let i = 0; i < 6; i++) {
     let option = document.createElement('option');
     option.innerHTML += five_letters_array[i];
     select.append(option);
 }
 
 let names = document.createElement('div');
+names.style.fontSize = "50px";
 document.body.append(names);
 
 select.addEventListener("change", FindNameByFirstLetter);
