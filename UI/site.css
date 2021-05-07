@@ -284,11 +284,11 @@ div.sim-slider-arrow-right:hover {
 }
 
 div.sim-slider-arrow-left:active {
-    opacity: 0;
+    opacity: 0.3;
 }
 
 div.sim-slider-arrow-right:active {
-    opacity: 0;
+    opacity: 0.3;
 }
 
 div.sim-slider-dots {
