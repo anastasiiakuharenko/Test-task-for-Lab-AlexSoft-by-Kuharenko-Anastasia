@@ -13,6 +13,7 @@ function make_array(length) {
                 unique_letter_is_found = true;
             }
         }
+
     }
     return five_letters_array;
 
@@ -25,8 +26,11 @@ document.body.append(form);
 let select = document.createElement('select');
 select.style.fontSize = "100px";
 form.append(select)
+let EmptyOption = document.createElement('option');
+EmptyOption.id = 'emptyOptionId';
+select.append(EmptyOption);
+for (let i = 1; i < 6; i++) {
 
-for (let i = 0; i < 6; i++) {
     let option = document.createElement('option');
     option.innerHTML += five_letters_array[i];
     select.append(option);
@@ -35,13 +39,19 @@ for (let i = 0; i < 6; i++) {
 let names = document.createElement('div');
 names.style.fontSize = "50px";
 document.body.append(names);
+let nomatches = document.createElement('div');
+nomatches.style.fontSize = "50px";
 
 select.addEventListener("change", FindNameByFirstLetter);
 
 
 async function FindNameByFirstLetter() {
-    let LETTERS = await (await fetch('list.json')).json();
+    let LETTERS = await (await fetch('list.json')).json()
+    let emptyElement = document.getElementById('emptyOptionId');
+    if (emptyElement != null)
+        emptyElement.parentElement.removeChild(emptyElement);
     names.innerHTML = '';
+    nomatches.innerHTML = '';
     for (let i = 0; i < LETTERS.length; i++) {
         if (LETTERS[i].name.charAt(0) == this.value) {
             console.log(LETTERS[i].name);
@@ -53,9 +63,8 @@ async function FindNameByFirstLetter() {
         }
     }
     if (names.innerHTML == '') {
-        let nomatches = document.createElement('div');
-        nomatches.style.fontSize = "50px";
         nomatches.innerHTML = 'No matches :(';
         document.body.append(nomatches);
     }
+
 }
