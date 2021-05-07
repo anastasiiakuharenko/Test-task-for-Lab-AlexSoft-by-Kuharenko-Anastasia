@@ -3,6 +3,7 @@ body {
     font-size: 15px;
     font-family: 'Georgia', sans-serif;
     line-height: 1.6;
+    background-color: #313131;
 }
 
 *,
@@ -24,6 +25,8 @@ h6 {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0px 20px;
+    background-color: #ffffff;
 }
 
 
@@ -34,7 +37,7 @@ h6 {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 150px;
+    padding-top: 100px;
 }
 
 .intro_inner {
@@ -48,6 +51,7 @@ h6 {
     color: #666666;
     font-weight: normal;
     text-align: center;
+    padding-top: 50px;
 }
 
 
@@ -142,6 +146,14 @@ nav ul li {
     width: 10%;
 }
 
+.first_item_of_nav {
+    background-color: #a7c353;
+}
+
+.first_item_of_nav a {
+    color: white;
+}
+
 .last_item_of_nav a {
     padding-top: 63%;
     text-align: right;
@@ -214,10 +226,8 @@ img {
 .Very_long_slider_title {
     position: absolute;
     width: 404px;
-    z-index: 1;
-    display: inline-block;
     bottom: 0;
-    right: 35px;
+    right: 50px;
     padding: 15px;
 }
 
@@ -266,11 +276,19 @@ div.sim-slider-arrow-right {
 }
 
 div.sim-slider-arrow-left:hover {
-    opacity: 1.0;
+    opacity: 0.7;
 }
 
 div.sim-slider-arrow-right:hover {
-    opacity: 1.0;
+    opacity: 0.7;
+}
+
+div.sim-slider-arrow-left:active {
+    opacity: 0;
+}
+
+div.sim-slider-arrow-right:active {
+    opacity: 0;
 }
 
 div.sim-slider-dots {
@@ -282,6 +300,10 @@ div.sim-slider-dots {
     z-index: 3;
     text-align: center;
     color: #a7c353;
+}
+
+span.sim-dot:active {
+    opacity: 0;
 }
 
 span.sim-dot {
@@ -299,6 +321,9 @@ span.sim-dot {
 .section {
     padding: 0;
     margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .about {
@@ -347,6 +372,10 @@ span.sim-dot {
     padding-bottom: 25px;
     padding-top: 15px;
     text-decoration: none;
+}
+
+.about_link:hover {
+    color: #313131;
 }
 
 .about_img2 {
@@ -425,9 +454,25 @@ span.sim-dot {
     padding-right: 25px;
 }
 
+.basement_item_last {
+    width: 25%;
+    padding: 15px;
+    padding-top: 30px;
+    padding-left: 0;
+    flex: 1 1 auto;
+    padding-right: 0px;
+}
+
 .section_basement {
     padding: 0;
     margin: 0;
+    background-color: #313131;
+}
+
+.container_basement {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     background-color: #313131;
 }
 
@@ -448,6 +493,14 @@ span.sim-dot {
     font-size: 12px;
     color: #a7c353;
     text-decoration: none;
+}
+
+.basement_link:hover {
+    color: #ffffff;
+}
+
+.basement_link_socials:hover {
+    color: #ffffff;
 }
 
 .basement_link_socials {
@@ -483,6 +536,10 @@ span.sim-dot {
     text-decoration: none;
 }
 
+.basement_link_last:hover {
+    color: #ffffff;
+}
+
 .Message {
     background-color: #383838;
     width: 100%;
@@ -499,14 +556,58 @@ span.sim-dot {
 .Name {
     background-color: #383838;
     width: 100%;
-    border: transparent;
+    border: none;
     border-radius: 5px;
+    -moz-border: transparent;
+    -moz-border-radius: 5px;
     height: 30px;
     display: block;
     margin-bottom: 9px;
     font-size: 13px;
     margin-top: 17px;
     color: #999999;
+}
+
+.Name:focus {
+    outline: none;
+}
+
+.Email:focus {
+    outline: none;
+}
+
+.Message:focus {
+    outline: none;
+}
+
+.Name::-webkit-input-placeholder {
+    font-size: 13px;
+    font-family: Georgia;
+}
+
+.Email::-webkit-input-placeholder {
+    font-size: 13px;
+    font-family: Georgia;
+}
+
+.Message::-webkit-input-placeholder {
+    font-size: 13px;
+    font-family: Georgia;
+}
+
+.Name::-moz-placeholder {
+    font-size: 13px;
+    font-family: Georgia;
+}
+
+.Email::-moz-placeholder {
+    font-size: 13px;
+    font-family: Georgia;
+}
+
+.Message::-moz-placeholder {
+    font-size: 13px;
+    font-family: Georgia;
 }
 
 .Email {
@@ -533,6 +634,15 @@ span.sim-dot {
     font-weight: bold;
     padding-left: 10px;
     padding-right: 12px;
+}
+
+.Submit:hover {
+    color: white;
+    background-color: #6b7e33;
+}
+
+.Submit:focus {
+    outline: none;
 }
 
 .end {
